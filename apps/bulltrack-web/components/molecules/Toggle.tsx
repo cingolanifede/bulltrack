@@ -9,7 +9,7 @@ export function Toggle({ label, checked, onChange }: ToggleProps) {
     <label className="flex cursor-pointer items-center justify-between">
       {label}
       <span
-        className={`relative inline-block h-6 w-11 shrink-0 rounded-full transition-colors focus-within:ring-2 focus-within:ring-primary/60 focus-within:ring-offset-2 focus-within:ring-offset-transparent ${
+        className={`relative inline-block h-6 w-11 shrink-0 rounded-full transition-colors ${
           checked ? "bg-black" : "bg-zinc-700"
         }`}
       >
