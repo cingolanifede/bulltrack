@@ -13,6 +13,7 @@ export type UseClassificationResultsPageResult = {
   isLoading: boolean;
   error: Error | null;
   refetch: () => void;
+  dataUpdatedAt: number;
   isFavorite: (bullId: number) => boolean;
   toggleFavorite: (bullId: number) => void;
   isFavoritePending: boolean;
@@ -50,7 +51,14 @@ export function useClassificationResultsPage(): UseClassificationResultsPageResu
     [page, limit, search, origen, paraVaquillona, pelaje, sortByScore]
   );
 
-  const { data: bulls, total, isLoading, error, refetch } = useBulls(params);
+  const {
+    data: bulls,
+    total,
+    isLoading,
+    error,
+    refetch,
+    dataUpdatedAt,
+  } = useBulls(params);
   const {
     isFavorite,
     toggle,
@@ -80,6 +88,7 @@ export function useClassificationResultsPage(): UseClassificationResultsPageResu
     isLoading,
     error: error ?? null,
     refetch,
+    dataUpdatedAt,
     isFavorite,
     toggleFavorite: toggle,
     isFavoritePending,

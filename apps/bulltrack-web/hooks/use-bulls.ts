@@ -37,5 +37,6 @@ export function useBulls(params: BullsQueryParams) {
     isFetching: query.isFetching,
     error: query.error,
     refetch: query.refetch,
+    dataUpdatedAt: query.dataUpdatedAt,
   };
 }
