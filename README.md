@@ -2,6 +2,8 @@
 
 Classification results dashboard for browsing and filtering bull records. The application consists of a Next.js frontend and a NestJS API backed by PostgreSQL, with JWT authentication, server-side pagination and filtering, and a computed bull score.
 
+**Live demo (mock data):** [https://bulltrackpro-phi.vercel.app/](https://bulltrackpro-phi.vercel.app/) — frontend only, no API or database; uses in-app mock data.
+
 This repository is a pnpm monorepo. Workspace packages are under `apps/`. Install dependencies once from the root with `pnpm install`; that installs for all apps. You can run scripts from the root or from each app directory.
 
 ## Repository layout
