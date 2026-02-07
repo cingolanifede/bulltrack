@@ -1,0 +1,14 @@
+{
+  "name": "bulltrack",
+  "private": true,
+  "scripts": {
+    "dev:api": "pnpm --filter bulltrack-api run start:dev",
+    "dev:web": "pnpm --filter bulltrack-web run dev",
+    "build:api": "pnpm --filter bulltrack-api run build",
+    "build:web": "pnpm --filter bulltrack-web run build",
+    "seed": "pnpm --filter bulltrack-api run seed"
+  },
+  "devDependencies": {
+    "prettier": "^3.8.1"
+  }
+}

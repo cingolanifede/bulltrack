@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --radius-sm: 8px;
+}
+
+@theme {
+  --color-surface-deep: #0a0c0a;
+  --color-surface: #111714;
+  --color-border-dark: #1f2a22;
+  --color-primary: #36e27b;
+  --color-on-primary: #393939;
+  --color-border-muted: #2a332e;
+  --color-surface-input: #0f1412;
+  --color-primary-hover: #2ec96d;
+  --color-surface-ink: #1c2620;
+  --color-text-body: #2d2d2d;
+  --color-accent: #4e61f6;
+  --color-text-rank: #394d41;
+  --color-surface-light: #f1f1f1;
+  --color-surface-success: #ecf8ef;
+  --color-success: #43b75d;
+  --color-accent-lavender: #8a96f4;
+  --color-surface-accent: #edefff;
+  --color-border-light: #d9d9d9;
+  --color-surface-elevated: #152b1e;
+  --color-surface-panel: #29382f;
+  --color-surface-panel-hover: #2b3f35;
+  --color-surface-inactive: #e5e5e5;
+  --color-surface-content: #f7f7f7;
+  --color-border-sidebar: #2b3a31;
+  --color-avatar-bg: #ddcbea;
+  --color-primary-light: #5bee96;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #111714;
+    --foreground: #ededed;
+  }
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family:
+    var(--font-geist-sans), var(--font-sans), ui-sans-serif, system-ui,
+    sans-serif;
+  min-height: 100dvh;
+}
+
+.overflow-x-auto {
+  -webkit-overflow-scrolling: touch;
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.25) transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.22);
+  border-radius: 2px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.32);
+}
